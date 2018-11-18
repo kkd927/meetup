@@ -13,6 +13,7 @@
 
     cal = new Calendar('#calendar', {
         defaultView: 'month',
+        useCreationPopup: useCreationPopup,
         useDetailPopup: useDetailPopup,
         calendars: CalendarList,
         template: {
@@ -291,6 +292,8 @@
         cal.createSchedules([schedule]);
 
         refreshScheduleVisibility();
+
+        // var url = "https://github.com/kkd927/meetup/issues/new?title=Request+for+registration+of+new+meetup&body=123&labels=new+event";
     }
 
     function onChangeCalendars(e) {
@@ -408,7 +411,7 @@
         $('#lnb-calendars').on('change', onChangeCalendars);
 
         $('#btn-save-schedule').on('click', onNewSchedule);
-        // $('#btn-new-schedule').on('click', createNewSchedule);
+        $('#btn-new-schedule').on('click', createNewSchedule);
 
         $('#dropdownMenu-calendars-list').on('click', onChangeNewScheduleCalendar);
 
