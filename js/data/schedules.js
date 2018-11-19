@@ -32,6 +32,8 @@ function ScheduleInfo() {
     this.isReadOnly = false;
     this.goingDuration = 0;
     this.comingDuration = 0;
+    this.website = '';
+    this.tags = '';
 
     this.raw = {
         memo: '',

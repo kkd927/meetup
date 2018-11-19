@@ -280,7 +280,9 @@
             raw: {
                 class: scheduleData.raw['class']
             },
-            state: scheduleData.state
+            state: scheduleData.state,
+            website: scheduleData.website,
+            tags: scheduleData.tags
         };
         if (calendar) {
             schedule.calendarId = calendar.id;
