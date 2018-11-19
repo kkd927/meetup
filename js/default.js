@@ -78,10 +78,6 @@
         }
     });
 
-    document.getElementById('calendar').addEventListener('keydown', e => {
-        console.log('keydown', e);
-    });
-
     /**
      * Get time template for time and all-day
      * @param {Schedule} schedule - schedule
@@ -378,6 +374,7 @@
     }
 
     function setRenderRangeText() {
+        // TODO:
         var renderRange = document.getElementById('renderRange');
         var options = cal.getOptions();
         var viewName = cal.getViewName();
