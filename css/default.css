@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 
+#tui-full-calendar-schedule-private {
+  display: none;
+}
+
+.tui-full-calendar-popup-section .tui-full-calendar-section-title {
+  width: 100%;
+}
+
 body {
   font-family: 'Noto Sans', sans-serif;
   color: '#333';
