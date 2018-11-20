@@ -42,12 +42,10 @@ function hexToRGBA(hex) {
 
 (function() {
     var calendar;
-    var id = 0;
 
     calendar = new CalendarInfo();
-    id += 1;
-    calendar.id = String(id);
-    calendar.name = 'Frontend';
+    calendar.id = 'Frontend';
+    calendar.name = String(calendar.id);
     calendar.color = '#ffffff';
     calendar.bgColor = '#9e5fff';
     calendar.dragBgColor = '#9e5fff';
@@ -55,9 +53,8 @@ function hexToRGBA(hex) {
     addCalendar(calendar);
 
     calendar = new CalendarInfo();
-    id += 1;
-    calendar.id = String(id);
-    calendar.name = 'Backend';
+    calendar.id = 'Backend';
+	calendar.name = String(calendar.id);
     calendar.color = '#ffffff';
     calendar.bgColor = '#00a9ff';
     calendar.dragBgColor = '#00a9ff';
@@ -65,9 +62,8 @@ function hexToRGBA(hex) {
     addCalendar(calendar);
 
     calendar = new CalendarInfo();
-    id += 1;
-    calendar.id = String(id);
-    calendar.name = 'AI';
+    calendar.id = 'AI';
+	calendar.name = String(calendar.id);
     calendar.color = '#ffffff';
     calendar.bgColor = '#bbdc00';
     calendar.dragBgColor = '#bbdc00';
@@ -75,9 +71,8 @@ function hexToRGBA(hex) {
     addCalendar(calendar);
 
     calendar = new CalendarInfo();
-    id += 1;
-    calendar.id = String(id);
-    calendar.name = 'Blockchain';
+    calendar.id = 'Blockchain';
+	calendar.name = String(calendar.id);
     calendar.color = '#ffffff';
     calendar.bgColor = '#ffbb3b';
     calendar.dragBgColor = '#ffbb3b';
@@ -85,9 +80,8 @@ function hexToRGBA(hex) {
     addCalendar(calendar);
 
     calendar = new CalendarInfo();
-    id += 1;
-    calendar.id = String(id);
-    calendar.name = 'IT';
+    calendar.id = 'IT';
+	calendar.name = String(calendar.id);
     calendar.color = '#ffffff';
     calendar.bgColor = '#ff4040';
     calendar.dragBgColor = '#ff4040';
@@ -95,9 +89,8 @@ function hexToRGBA(hex) {
     addCalendar(calendar);
 
 	calendar = new CalendarInfo();
-	id += 1;
-	calendar.id = String(id);
-	calendar.name = 'etc';
+	calendar.id = 'etc';
+	calendar.name = String(calendar.id);
 	calendar.color = '#ffffff';
 	calendar.bgColor = '#9d9d9d';
 	calendar.dragBgColor = '#9d9d9d';

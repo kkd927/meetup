@@ -78,6 +78,7 @@ body {
   border-bottom: 1px solid #bbb;
   font-size: 10px;
   background-color: #03cf5d;
+  background-image: -webkit-linear-gradient(left, #03cf5d 1%, #4f81d4 100%);
   display: flex;
   align-items: center;
   padding-left: 30px;
@@ -93,12 +94,43 @@ body {
   background: #fafafa;
 }
 
+@media (max-width:991px) {
+  #lnb {
+    display: none !important;
+  }
+}
+
 #right {
   position: absolute;
   left: 200px;
   top: 49px;
   right: 0;
   bottom: 0;
+  border-right: 1px solid #d5d5d5;
+}
+
+@media (max-width:991px) {
+  #right {
+    left: 0 !important;
+  }
+}
+
+#ad {
+  width: 150px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 49px;
+}
+
+@media (max-width: 767px) {
+  #ad {
+    display: none !important;
+  }
+
+  #right {
+    right: 0 !important;
+  }
 }
 
 #lnb label {

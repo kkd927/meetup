@@ -94,16 +94,7 @@
             html.push('<span class="calendar-font-icon ic-lock-b"></span>');
             html.push(' Private');
         } else {
-            if (schedule.isReadOnly) {
-                html.push('<span class="calendar-font-icon ic-readonly-b"></span>');
-            } else if (schedule.recurrenceRule) {
-                html.push('<span class="calendar-font-icon ic-repeat-b"></span>');
-            } else if (schedule.attendees.length) {
-                html.push('<span class="calendar-font-icon ic-user-b"></span>');
-            } else if (schedule.location) {
-                html.push('<span class="calendar-font-icon ic-location-b"></span>');
-            }
-            html.push(' ' + schedule.title);
+            html.push(schedule.title);
         }
 
         return html.join('');
@@ -374,7 +365,6 @@
     }
 
     function setRenderRangeText() {
-        // TODO:
         var renderRange = document.getElementById('renderRange');
         var options = cal.getOptions();
         var viewName = cal.getViewName();
@@ -394,8 +384,12 @@
 
     function setSchedules() {
         cal.clear();
-        generateSchedule(cal.getViewName(), cal.getDateRangeStart(), cal.getDateRangeEnd());
-        cal.createSchedules(ScheduleList);
+        // generateSchedule(cal.getViewName(), cal.getDateRangeStart(), cal.getDateRangeEnd());
+        $.getJSON("/meetup/data/events-" + moment(cal.getDate().getTime()).format('YYYY-MM') + ".json", function(data) {
+           cal.createSchedules(data);
+		});
+
+        // cal.createSchedules(ScheduleList);
         // var schedules = [
         //     {id: 489273, title: 'Workout for 2018-08-17', isAllDay: false, start: '2018-09-06T10:00+09:00', end: '2018-09-06T14:00:00+09:00', goingDuration: 30, comingDuration: 30, color: '#ffffff', isVisible: true, bgColor: '#69BB2D', dragBgColor: '#69BB2D', borderColor: '#69BB2D', calendarId: 'logged-workout', category: 'time', dueDateClass: '', customStyle: 'cursor: default;', isPending: false, isFocused: false, isReadOnly: true, isPrivate: false, location: '', attendees: '', recurrenceRule: '', state: ''},
         //     {id: 18073, title: 'completed with blocks', isAllDay: false, start: '2018-09-06T09:00:00+09:00', end: '2018-09-06T10:00:00+09:00', color: '#ffffff', isVisible: true, bgColor: '#54B8CC', dragBgColor: '#54B8CC', borderColor: '#54B8CC', calendarId: 'workout', category: 'time', dueDateClass: '', customStyle: '', isPending: false, isFocused: false, isReadOnly: false, isPrivate: false, location: '', attendees: '', recurrenceRule: '', state: ''}

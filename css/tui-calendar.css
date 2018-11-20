@@ -1099,6 +1099,16 @@ input[type='checkbox'].tui-full-calendar-checkbox-round + span {
     border: none;
     cursor: pointer;
 }
+.tui-full-calendar-popup-go2link,
+.tui-full-calendar-popup-share {
+    display: inline-block;
+    padding: 7px 9px 11px 9px;
+    width: calc(50% - 1px);
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 .tui-full-calendar-popup-vertical-line {
     background: #e5e5e5;
     width: 1px;
