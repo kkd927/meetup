@@ -1,13 +1,90 @@
 [
 	{
-		"id": 20180817,
-		"title": "Workout for 2018-08-17",
-		"start": "2018-11-06T10:00+09:00",
-		"end": "2018-11-07T14:00:00+09:00",
-		"calendarId": "Frontend",
-		"location": "강남역",
+		"id": 20181108,
+		"title": "LINE + LINK - DEV 2018",
+		"start": "2018-11-08T09:00+09:00",
+		"end": "2018-11-08T18:00+09:00",
+		"calendarId": "Blockchain",
+		"location": "코엑스 컨퍼런스룸 401호",
 		"state": "유료",
-		"website": "https://naver.com",
-		"tags": "python, Django"
+		"website": "https://linelinkdev2018.bloter.net/",
+		"tags": "블록체인, 핀테크"
+	},
+	{
+		"id": 20181115,
+		"title": "2019 IT Trend 세미나",
+		"start": "2018-11-15T09:40+09:00",
+		"end": "2018-11-15T17:30+09:00",
+		"calendarId": "IT",
+		"location": "한빛빌딩(홍대입구역)",
+		"state": "유료",
+		"website": "https://booking.naver.com/off/bizes/185852",
+		"tags": "IT트렌드, 자율주행, 블록체인, AR/VR, 챗봇"
+	},
+	{
+		"id": 20181117,
+		"title": "개발자를 위한 공감 세미나 : 17번째 이야기",
+		"start": "2018-11-17T10:30+09:00",
+		"end": "2018-11-17T15:50+09:00",
+		"calendarId": "Backend",
+		"location": "한빛빌딩(홍대입구역)",
+		"state": "유료",
+		"website": "http://www.hanbit.co.kr/store/education/edu_view.html?p_code=S8548956082",
+		"tags": "DevOps, Jenkins X, Elastic Search"
+	},
+	{
+		"id": 20181122,
+		"title": "JetBrains Day 서울 2018",
+		"start": "2018-11-22T09:30+09:00",
+		"end": "2018-11-22T18:00+09:00",
+		"calendarId": "Backend",
+		"location": "세종대학교 컨벤션센터",
+		"state": "유료",
+		"website": "https://info.jetbrains.com/jetbrains-day-seoul-2018.html",
+		"tags": "IntelliJ, Kotlin"
+	},
+	{
+		"id": 20181123,
+		"title": "DevFest Pangyo 2018 : AI FOR EVERYONE",
+		"start": "2018-11-23T19:00+09:00",
+		"end": "2018-11-23T22:00+09:00",
+		"calendarId": "AI",
+		"location": "판교 H스퀘어 N동 7층 카카오 스위치온",
+		"state": "유료",
+		"website": "https://festa.io/events/136",
+		"tags": "IntelliJ, Kotlin"
+	},
+	{
+		"id": 20181123.1,
+		"title": "Agile Korea Conference 2018",
+		"start": "2018-11-23T09:00+09:00",
+		"end": "2018-11-23T18:00+09:00",
+		"calendarId": "etc",
+		"location": "삼성SDS 잠실사옥 서관",
+		"state": "유료",
+		"website": "https://agilekorea.kr/index.html",
+		"tags": "Agile, 개발문화"
+	},
+	{
+		"id": 20181128,
+		"title": "GDG DevFest WebTech 2018",
+		"start": "2018-11-28T08:00+09:00",
+		"end": "2018-11-28T22:30+09:00",
+		"calendarId": "Frontend",
+		"location": "MARU 180",
+		"state": "유료",
+		"website": "https://festa.io/events/140",
+		"tags": "Frontend, Angular"
+	},
+	{
+		"id": 20181129,
+		"title": "KOSSCON 2018",
+		"start": "2018-11-29T09:30+09:00",
+		"end": "2018-11-29T16:30+09:00",
+		"calendarId": "IT",
+		"location": "삼성동 코엑스 컨퍼런스룸(남) 317, 318, 327호",
+		"state": "무료",
+		"website": "https://kosscon.kr/",
+		"tags": "AI, 블록체인, 빅데이터, CI/CD, 도커, 딥러닝"
 	}
 ]
