@@ -29,6 +29,18 @@
         }
     });
 
+	function getQueryParam(name){
+		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+
+		return results ? results[1] : undefined;
+	}
+
+	var sc = getQueryParam('schedule');
+	var cl = getQueryParam('calendar');
+
+	var d = parseInt(parseInt(sc) / 100);
+	cal.setDate(new Date(parseInt(parseInt(d) / 100), parseInt(d) % 100 - 1));
+
     // event handlers
     cal.on({
         'clickMore': function(e) {
@@ -42,7 +54,32 @@
         },
         'beforeCreateSchedule': function(e) {
             console.log('beforeCreateSchedule', e);
-            saveNewSchedule(e);
+
+            var data = {
+				"id": e.id,
+                "title": "e.title",
+                "start": moment(e.start.toDate().setSeconds(0)).format(),
+                "end": moment(e.end.toDate().setSeconds(0)).format(),
+                "calendarId": e.calendarId,
+                "location": e.location,
+                "state": e.state,
+                "website": e.website,
+                "tags": e.tags
+            };
+
+            if (e.isAllDay) {
+            	data.isAllday = e.isAllDay;
+			}
+
+            var param = {
+                title: "Request for registration of new meetup",
+                labels: "new event",
+                body: JSON.stringify(data, null, 4)
+            };
+
+            var url = "https://github.com/kkd927/meetup/issues/new?" + $.param(param);
+            window.open(url, '_blank');
+            // saveNewSchedule(e);
         },
         'beforeUpdateSchedule': function(e) {
             console.log('beforeUpdateSchedule', e);
@@ -55,7 +92,7 @@
             cal.deleteSchedule(e.schedule.id, e.schedule.calendarId);
         },
         'afterRenderSchedule': function(e) {
-            var schedule = e.schedule;
+            // var schedule = e.schedule;
             // var element = cal.getElement(schedule.id, schedule.calendarId);
             // console.log('afterRenderSchedule', element);
         },
@@ -425,6 +462,12 @@
     setRenderRangeText();
     setSchedules();
     setEventListener();
+
+	if (sc && cl) {
+		window.onload = function() {
+			window.cal.openDetailPopup(parseFloat(decodeURIComponent(sc)), decodeURIComponent(cl));
+		};
+	}
 })(window, tui.Calendar);
 
 // set calendars

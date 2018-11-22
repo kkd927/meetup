@@ -1,6 +1,6 @@
 /*!
  * TOAST UI Calendar
- * @version 1.8.0 | Tue Nov 20 2018
+ * @version 1.8.0 | Thu Nov 22 2018
  * @author NHNEnt FE Development Lab <dl_javascript@nhnent.com>
  * @license MIT
  */
@@ -9205,6 +9205,7 @@
 				this._openCreationPopup = created.openCreationPopup;
 				this._showCreationPopup = created.showCreationPopup;
 				this._hideMoreView = created.hideMoreView;
+				this._detailView = created.detailView;
 
 				this.move();
 				this.render();
@@ -9373,6 +9374,24 @@
 				if (this._openCreationPopup) {
 					this._openCreationPopup(schedule);
 				}
+			};
+
+			Calendar.prototype.openDetailPopup = function(scheduleId, calendarId) {
+				var sc = this.getSchedule(scheduleId, calendarId);
+				var el = this.getElement(scheduleId, calendarId);
+				var cl = this._controller.calendars.find(function(calendar) {
+					return calendar.id == calendarId
+				});
+
+				var event = {
+					schedule: sc,
+					calendar: cl,
+					event: {
+						target: el
+					}
+				};
+
+				this._detailView.render(event);
 			};
 
 			/**
@@ -9678,6 +9697,7 @@
 				// binding popup for schedule detail
 				if (options.useDetailPopup) {
 					detailView = new ScheduleDetailPopup(layoutContainer, baseController.calendars);
+
 					onShowDetailPopup = function(eventData) {
 						var scheduleId = eventData.schedule.calendarId;
 						eventData.calendar = common.find(baseController.calendars, function(calendar) {
@@ -9784,6 +9804,7 @@
 
 				return {
 					view: monthView,
+					detailView: detailView,
 					refresh: function() {
 						monthView.vLayout.refresh();
 					},
@@ -10157,6 +10178,7 @@
 
 				return {
 					view: weekView,
+					detailView: detailView,
 					refresh: function() {
 						var weekViewHeight = weekView.getViewBound().height,
 							daynameViewHeight = domutil.getBCRect(
@@ -19506,7 +19528,20 @@
 				var className = config.classname('popup-share');
 
 				if (domutil.hasClass(target, className) || domutil.closest(target, '.' + className)) {
-					// a
+					var url = window.location.origin + window.location.pathname + '?calendar=' + this._calendar.id + "&schedule=" + this._schedule.id;
+
+					var $input = document.createElement('input');
+					$input.value = url;
+					document.body.appendChild($input);
+					$input.select();
+					var success = document.execCommand("copy");
+					$input.remove();
+
+					if (success) {
+						window.alert('링크 주소가 클립보드에 복사되었습니다.');
+					} else {
+						window.alert('복사에 실패하였습니다.');
+					}
 				}
 			};
 
