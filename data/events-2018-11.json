@@ -66,6 +66,17 @@
 		"tags": "Agile, 개발문화"
 	},
 	{
+		"id": 20181127,
+		"title": "2018 미니해커톤",
+		"start": "2018-11-27T10:00:00+09:00",
+		"end": "2018-11-28T17:30:00+09:00",
+		"calendarId": "etc",
+		"location": "공개SW개발자센터",
+		"state": "무료",
+		"website": "https://festa.io/events/151",
+		"tags": "해커톤"
+	},
+	{
 		"id": 20181128,
 		"title": "GDG DevFest WebTech 2018",
 		"start": "2018-11-28T08:00+09:00",

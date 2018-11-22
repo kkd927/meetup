@@ -1,5 +1,27 @@
 [
 	{
+		"id": 20181202,
+		"title": "Hello Developers!",
+		"start": "2018-12-02T14:00:00+09:00",
+		"end": "2018-12-02T16:00:00+09:00",
+		"calendarId": "etc",
+		"location": "마루 180 지하 1층",
+		"state": "무료",
+		"website": "https://festa.io/events/149",
+		"tags": "Django Girls Seoul Organizers"
+	},
+	{
+		"id": 20181205,
+		"title": "코스모체인 컨퍼런스",
+		"start": "2018-12-05T19:30:00+09:00",
+		"end": "2018-12-05T21:30:00+09:00",
+		"calendarId": "Blockchain",
+		"location": "마루180 B1 이벤트홀",
+		"state": "유료",
+		"website": "https://festa.io/events/153",
+		"tags": "Cosmochain, 블록체인, FE"
+	},
+	{
 		"id": 20181218,
 		"title": "#1 Flink Seoul First Meetup with data-Artisans",
 		"start": "2018-12-18T18:00+09:00",

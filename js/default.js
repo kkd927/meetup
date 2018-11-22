@@ -58,7 +58,7 @@
             // console.log('beforeCreateSchedule', e);
 
             var data = {
-				"id": e.id,
+				"id": parseInt(moment(e.start.toDate()).format('YYYYMMDD')),
                 "title": e.title,
                 "start": moment(e.start.toDate().setSeconds(0)).format(),
                 "end": moment(e.end.toDate().setSeconds(0)).format(),
