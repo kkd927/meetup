@@ -38,8 +38,10 @@
 	var sc = getQueryParam('schedule');
 	var cl = getQueryParam('calendar');
 
-	var d = parseInt(parseInt(sc) / 100);
-	cal.setDate(new Date(parseInt(parseInt(d) / 100), parseInt(d) % 100 - 1));
+	if (sc && cl) {
+		var d = parseInt(parseInt(sc) / 100);
+		cal.setDate(new Date(parseInt(parseInt(d) / 100), parseInt(d) % 100 - 1));
+	}
 
     // event handlers
     cal.on({
