@@ -59,7 +59,7 @@
 
             var data = {
 				"id": e.id,
-                "title": "e.title",
+                "title": e.title,
                 "start": moment(e.start.toDate().setSeconds(0)).format(),
                 "end": moment(e.end.toDate().setSeconds(0)).format(),
                 "calendarId": e.calendarId,
