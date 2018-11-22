@@ -22,6 +22,17 @@
 		"tags": "Cosmochain, 블록체인, FE"
 	},
 	{
+		"id": 20181215,
+		"title": "MASOCON 2018",
+		"start": "2018-12-15T10:00:00+09:00",
+		"end": "2018-12-15T18:00:00+09:00",
+		"calendarId": "IT",
+		"location": "누리꿈스퀘어 비즈니스타워 3층",
+		"state": "유료",
+		"website": "https://www.imaso.co.kr/masocon2018/",
+		"tags": "DevOps, 개발문화"
+	},
+	{
 		"id": 20181218,
 		"title": "#1 Flink Seoul First Meetup with data-Artisans",
 		"start": "2018-12-18T18:00+09:00",
