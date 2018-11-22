@@ -46,16 +46,16 @@
     // event handlers
     cal.on({
         'clickMore': function(e) {
-            console.log('clickMore', e);
+            // console.log('clickMore', e);
         },
         'clickSchedule': function(e) {
-            console.log('clickSchedule', e);
+            // console.log('clickSchedule', e);
         },
         'clickDayname': function(date) {
-            console.log('clickDayname', date);
+            // console.log('clickDayname', date);
         },
         'beforeCreateSchedule': function(e) {
-            console.log('beforeCreateSchedule', e);
+            // console.log('beforeCreateSchedule', e);
 
             var data = {
 				"id": e.id,
@@ -84,13 +84,13 @@
             // saveNewSchedule(e);
         },
         'beforeUpdateSchedule': function(e) {
-            console.log('beforeUpdateSchedule', e);
+            // console.log('beforeUpdateSchedule', e);
             e.schedule.start = e.start;
             e.schedule.end = e.end;
             cal.updateSchedule(e.schedule.id, e.schedule.calendarId, e.schedule);
         },
         'beforeDeleteSchedule': function(e) {
-            console.log('beforeDeleteSchedule', e);
+            // console.log('beforeDeleteSchedule', e);
             cal.deleteSchedule(e.schedule.id, e.schedule.calendarId);
         },
         'afterRenderSchedule': function(e) {
@@ -99,7 +99,7 @@
             // console.log('afterRenderSchedule', element);
         },
         'clickTimezonesCollapseBtn': function(timezonesCollapsed) {
-            console.log('timezonesCollapsed', timezonesCollapsed);
+            // console.log('timezonesCollapsed', timezonesCollapsed);
 
             if (timezonesCollapsed) {
                 cal.setTheme({
@@ -149,8 +149,8 @@
         var options = cal.getOptions();
         var viewName = '';
 
-        console.log(target);
-        console.log(action);
+        // console.log(target);
+        // console.log(action);
         switch (action) {
             case 'toggle-daily':
                 viewName = 'day';

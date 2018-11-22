@@ -1,6 +1,6 @@
 /*!
  * TOAST UI Calendar
- * @version 1.8.0 | Tue Nov 20 2018
+ * @version 1.8.0 | Thu Nov 22 2018
  * @author NHNEnt FE Development Lab <dl_javascript@nhnent.com>
  * @license MIT
  */
@@ -1064,6 +1064,12 @@ input[type='checkbox'].tui-full-calendar-checkbox-round + span {
     font-size: 15px;
     font-weight: bold;
     line-height: 1.6;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    height: 20px;
+    width: 265px;
 }
 .tui-full-calendar-popup-detail .tui-full-calendar-schedule-private {
     display: none;
