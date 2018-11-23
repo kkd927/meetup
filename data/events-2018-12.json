@@ -22,6 +22,28 @@
 		"tags": "Cosmochain, 블록체인, FE"
 	},
 	{
+		"id": 20181212,
+		"title": "컨테이너와 클라우드 네이티브 로드쇼 Day 1",
+		"start": "2018-12-12T09:00:00+09:00",
+		"end": "2018-12-12T16:20:00+09:00",
+		"calendarId": "Backend",
+		"location": "그랜드 인터컨티넨탈 서울 파르나스 2층 오키드룸",
+		"state": "무료",
+		"website": "https://festa.io/events/154",
+		"tags": "cloud, docker, kubernetes, msa"
+	},
+	{
+		"id": 20181213,
+		"title": "컨테이너와 클라우드 네이티브 로드쇼 Day2 : 핸즈온 워크샵",
+		"start": "2018-12-13T08:30:00+09:00",
+		"end": "2018-12-13T16:00:00+09:00",
+		"calendarId": "Backend",
+		"location": "엘타워 8층 엘하우스홀",
+		"state": "유료",
+		"website": "https://festa.io/events/155",
+		"tags": "cloud native, msa, vert.x"
+	},
+	{
 		"id": 20181215,
 		"title": "MASOCON 2018",
 		"start": "2018-12-15T10:00:00+09:00",
