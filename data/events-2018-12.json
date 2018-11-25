@@ -22,6 +22,17 @@
 		"tags": "Cosmochain, 블록체인, FE"
 	},
 	{
+	    "id": 20181211,
+	    "title": "Vuetiful Korea 6th",
+	    "start": "2018-12-11T19:00:00+09:00",
+	    "end": "2018-12-11T21:30:00+09:00",
+	    "calendarId": "Frontend",
+	    "location": "NAVER D2 STARTUP FACTORY",
+	    "state": "유료",
+	    "website": "https://meetgo.kr/#/userEventDetail/vuetiful06",
+	    "tags": "Vue.js"
+	},
+	{
 		"id": 20181212,
 		"title": "컨테이너와 클라우드 네이티브 로드쇼 Day 1",
 		"start": "2018-12-12T09:00:00+09:00",
