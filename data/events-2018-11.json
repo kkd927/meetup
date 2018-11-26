@@ -108,5 +108,16 @@
 		"state": "무료",
 		"website": "https://kosscon.kr/",
 		"tags": "AI, 블록체인, 빅데이터, CI/CD, 도커, 딥러닝"
+	},
+	{
+		"id": 20181129.1,
+		"title": "Golang Korea MeetUp in Seoul 11월",
+		"start": "2018-11-29T19:30:00+09:00",
+		"end": "2018-11-29T22:30:00+09:00",
+		"calendarId": "Backend",
+		"location": "kosslab",
+		"state": "무료",
+		"website": "https://www.meetup.com/Seoul-Go-Meetup/events/256560625/?fbclid=IwAR27kS9teK_AUEf5oUiGqJNAFAJv79QJvM47O6AhsfPlkC8BO0cd2uxOIQE",
+		"tags": "Golang"
 	}
 ]
