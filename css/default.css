@@ -113,21 +113,27 @@ body {
   }
 }
 
-#ad {
-  width: 150px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 49px;
+@media screen and (min-width: 980px) {
+  #ad {
+    width: 150px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 49px;
+  }
 }
 
 @media screen and (max-width: 980px) {
   #right {
     right: 0 !important;
+    bottom: 150px;
   }
 
   #ad {
-    display: none !important;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 }
 

@@ -486,3 +486,20 @@
     });
     calendarList.innerHTML = html.join('\n');
 })();
+
+var beforeWidth = 0;
+
+$( window ).resize( function() {
+    var currentWidth = $('body').width();
+
+    if ((beforeWidth - 980) * (currentWidth - 980) < 0) {
+        console.log('change');
+        var $ad = $('#ad');
+        $ad.empty();
+        var content = '<ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8876596272501347" data-ad-slot="4472779124" data-ad-format="auto" data-full-width-responsive="true"></ins>' +
+        '<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+        $ad.html(content);
+    }
+
+    beforeWidth = currentWidth;
+})
