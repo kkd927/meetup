@@ -487,7 +487,7 @@
     calendarList.innerHTML = html.join('\n');
 })();
 
-var beforeWidth = 0;
+var beforeWidth = $('body').width();
 
 $( window ).resize( function() {
     var currentWidth = $('body').width();
