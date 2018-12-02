@@ -115,7 +115,7 @@ body {
   }
 }
 
-@media (max-width:991px) {
+@media (max-width:767px) {
   #right {
     right: 0 !important;
   }
