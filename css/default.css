@@ -135,6 +135,7 @@ body {
     position: absolute;
     bottom: 0;
     overflow: hidden;
+    top: auto !important;
   }
 }
 
