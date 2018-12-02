@@ -115,6 +115,12 @@ body {
   }
 }
 
+@media (max-width:991px) {
+  #right {
+    right: 0 !important;
+  }
+}
+
 #ad {
   width: 150px;
   position: absolute;
@@ -126,10 +132,6 @@ body {
 @media (max-width: 767px) {
   #ad {
     display: none !important;
-  }
-
-  #right {
-    right: 0 !important;
   }
 }
 
