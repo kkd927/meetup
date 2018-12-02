@@ -94,12 +94,6 @@ body {
   background: #fafafa;
 }
 
-@media (max-width:991px) {
-  #lnb {
-    display: none !important;
-  }
-}
-
 #right {
   position: absolute;
   left: 200px;
@@ -109,15 +103,13 @@ body {
   border-right: 1px solid #d5d5d5;
 }
 
-@media (max-width:991px) {
+@media screen and (max-width:991px) {
+  #lnb {
+    display: none !important;
+  }
+
   #right {
     left: 0 !important;
-  }
-}
-
-@media (max-width:767px) {
-  #right {
-    right: 0 !important;
   }
 }
 
@@ -129,7 +121,11 @@ body {
   top: 49px;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 980px) {
+  #right {
+    right: 0 !important;
+  }
+
   #ad {
     display: none !important;
   }
