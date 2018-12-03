@@ -1,6 +1,6 @@
 /*!
  * TOAST UI Calendar
- * @version 1.8.0 | Thu Nov 22 2018
+ * @version 1.8.0 | Mon Dec 03 2018
  * @author NHNEnt FE Development Lab <dl_javascript@nhnent.com>
  * @license MIT
  */
@@ -8916,6 +8916,14 @@
 				this.fire('clickMore', clickMoreSchedule);
 			};
 
+			Calendar.prototype._onGoToLink = function(e) {
+				this.fire('beforeGoToLinkSchedule', e);
+			};
+
+			Calendar.prototype._onClickShare = function(e) {
+				this.fire('beforeShareSchedule', e);
+			};
+
 			/**
 			 * dayname click event handler
 			 * @fires Calendar#clickDayname
@@ -9082,10 +9090,22 @@
 			Calendar.prototype._toggleViewSchedule = function(isAttach, view) {
 				var self = this,
 					handler = view.handler,
-					method = isAttach ? 'on' : 'off';
+					method = isAttach ? 'on' : 'off',
+					isDayGridHandlerRegist = false;
 
 				util.forEach(handler.click, function(clickHandler) {
 					clickHandler[method]('clickSchedule', self._onClick, self);
+
+					if (clickHandler.constructor.name === "DayGridClick") {
+						if (isDayGridHandlerRegist) {
+							return;
+						}
+
+						isDayGridHandlerRegist = true;
+					}
+
+					clickHandler[method]('beforeGoToLinkSchedule', self._onGoToLink, self);
+					clickHandler[method]('beforeShareSchedule', self._onClickShare, self);
 				});
 
 				util.forEach(handler.dayname, function(clickHandler) {
@@ -10302,6 +10322,27 @@
 					),
 					containsTarget = this.view.container.contains(target);
 				var blockElement, scheduleElement;
+				var detailElement, shareElement;
+
+				detailElement = domutil.closest(
+					clickEvent.target,
+					config.classname('.popup-go2link')
+				);
+
+				shareElement = domutil.closest(
+					clickEvent.target,
+					config.classname('.popup-share')
+				);
+
+				if (detailElement) {
+					self.fire('beforeGoToLinkSchedule', {});
+					return;
+				}
+
+				if (shareElement) {
+					self.fire('beforeShareSchedule', {});
+					return;
+				}
 
 				if (!containsTarget) {
 					return;
@@ -12381,6 +12422,8 @@
 			MonthClick.prototype._onClick = function(clickEvent) {
 				var self = this,
 					moreElement,
+					detailElement,
+					shareElement,
 					scheduleCollection = this.baseController.schedules,
 					blockElement = domutil.closest(clickEvent.target, config.classname('.weekday-schedule-block'))
 						|| domutil.closest(clickEvent.target, config.classname('.month-more-schedule'));
@@ -12389,6 +12432,24 @@
 					clickEvent.target,
 					config.classname('.weekday-exceed-in-month')
 				);
+
+				detailElement = domutil.closest(
+					clickEvent.target,
+					config.classname('.popup-go2link')
+				);
+
+				shareElement = domutil.closest(
+					clickEvent.target,
+					config.classname('.popup-share')
+				);
+
+				if (detailElement) {
+					self.fire('beforeGoToLinkSchedule', {});
+				}
+
+				if (shareElement) {
+					self.fire('beforeShareSchedule', {});
+				}
 
 				if (moreElement) {
 					self.fire('clickMore', {
@@ -19518,6 +19579,10 @@
 				var className = config.classname('popup-go2link');
 
 				if (domutil.hasClass(target, className) || domutil.closest(target, '.' + className)) {
+					this.fire('beforeGoToLinkSchedule', {
+						schedule: this._schedule
+					});
+
 					if (this._schedule.website) {
 						window.open(this._schedule.website, '_blank');
 					}
@@ -19528,6 +19593,10 @@
 				var className = config.classname('popup-share');
 
 				if (domutil.hasClass(target, className) || domutil.closest(target, '.' + className)) {
+					this.fire('beforeShareSchedule', {
+						schedule: this._schedule
+					});
+
 					var url = window.location.origin + window.location.pathname + '?calendar=' + this._calendar.id + "&schedule=" + this._schedule.id;
 
 					var $input = document.createElement('input');
