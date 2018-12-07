@@ -110,6 +110,17 @@
 		"tags": "AI, Bot, deep learning"
 	},
 	{
+		"id": 20181215.2,
+		"title": "2018 소프트웨어 캠퍼스 발표회 및 송년회",
+		"start": "2018-12-15T13:00:00+09:00",
+		"end": "2018-12-15T18:00:00+09:00",
+		"calendarId": "IT",
+		"location": "한빛미디어 한빛빌딩 B동 1층 리더스홀",
+		"state": "무료",
+		"website": "https://onoffmix.com/event/159486?utm_source=%EC%96%91%EC%9E%AC%EB%8F%99+%EC%BD%94%EB%93%9C%EB%9E%A9&utm_campaign=15ac56aaf7-EMAIL_CAMPAIGN_2018_12_07_01_59&utm_medium=email&utm_term=0_a40a5e7cdd-15ac56aaf7-86572823",
+		"tags": "블록체인, React.js, Tensorflow"
+	},
+	{
 		"id": 20181218,
 		"title": "#1 Flink Seoul First Meetup with data-Artisans",
 		"start": "2018-12-18T18:00+09:00",
