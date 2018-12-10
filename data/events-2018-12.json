@@ -88,6 +88,17 @@
 		"tags": "cloud native, msa, vert.x"
 	},
 	{
+		"id": 20181213.1,
+		"title": "Druid meetup 9th",
+		"start": "2018-12-13T18:15:00+09:00",
+		"end": "2018-12-13T20:00:00+09:00",
+		"calendarId": "Backend",
+		"location": "도담빌딩 8F",
+		"state": "무료",
+		"website": "https://www.meetup.com/ko-KR/Druid-Seoul/events/256706501/",
+		"tags": "Druid"
+	},
+	{
 		"id": 20181215,
 		"title": "MASOCON 2018",
 		"start": "2018-12-15T10:00:00+09:00",
